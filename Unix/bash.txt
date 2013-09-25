@@ -1,0 +1,18 @@
+# Bash Startup Files ( https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html )
+
+Invoked as an interactive login shell or with --login Bash executes commands from:
+/etc/profile, then first found among ~/.bash_profile, ~/.bash_login, ~/.profile, in that order
+
+When a login shell exits, executes commands from the file ~/.bash_logout, if it exists.
+
+Invoked as an interactive non-login shell Bash reads and executes commands from ~/.bashrc
+
+So, typically, your ~/.bash_profile contains the line:
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+Invoked non-interactively Bash behaves as if the following command were executed:
+if [ -n "$BASH_ENV" ]; then . "$BASH_ENV"; fi
+
+
+shopt - toggle/display/query shell options
+ if ! shopt -q login_shell ; # We're not a login shell
