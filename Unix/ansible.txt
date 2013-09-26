@@ -1,0 +1,8 @@
+Ansible
+http://www.ansibleworks.com/
+http://www.ansibleworks.com/why-ansible/ 
+http://www.ansibleworks.com/tech/ 
+
+Tim: Ansible QuickStart video (My team sat through this a few months ago – it’s easier than reading IMO)
+http://www.ansibleworks.com/quickstart-video/
+
