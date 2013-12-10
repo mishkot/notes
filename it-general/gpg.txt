@@ -1,0 +1,11 @@
+Resources:
+
+https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+
+www.gnupg.org/gph/en/manual.html                      The GNU Privacy Handbook
+
+Ubuntu Gnu Privacy Guard Howto
+help.ubuntu.com/community/­GnuPrivacyGuardHowto
+
+Linux Crypto Archives - Arabesque
+blog.sanctum.geek.nz/series/linux-­crypto/ 
