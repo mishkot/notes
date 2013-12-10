@@ -1,11 +1,12 @@
 Resources:
 
-https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+Manuals:
+Wikipedia: Pretty Good Privacy        https://en.wikipedia.org/wiki/Pretty_Good_Privacy         
+The GNU Privacy Handbook              http://www.gnupg.org/gph/en/manual.html                   
+Ubuntu Gnu Privacy Guard Howto        https://help.ubuntu.com/community/GnuPrivacyGuardHowto    
+ArchLinux GnuPG                       https://wiki.archlinux.org/index.php/GnuPG
+Linux Crypto Archives - Arabesque     http://blog.sanctum.geek.nz/series/linux-crypto
 
-www.gnupg.org/gph/en/manual.html                      The GNU Privacy Handbook
-
-Ubuntu Gnu Privacy Guard Howto
-help.ubuntu.com/community/­GnuPrivacyGuardHowto
-
-Linux Crypto Archives - Arabesque
-blog.sanctum.geek.nz/series/linux-­crypto/ 
+Utilities:
+gnupg.vim: Plugin for gpg files       http://www.vim.org/scripts/script.php?script_id=3645
+The Diceware Passphrase Home          http://world.std.com/~reinhold/diceware.html
