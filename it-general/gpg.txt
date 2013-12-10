@@ -32,10 +32,8 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
 $ gpg --gen-key
 Select RSA and RSA
 For the key length, choose the maximum 4096 bit RSA
-Does not expire
-
-Name key: Name Last (File Encrypt Key) <email>
- 
+Select "Does not expire" option
+Name the key: Name Last (Comment here) <email>
 Passphrase
 
 == Managing keys
