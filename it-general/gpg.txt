@@ -47,8 +47,17 @@ See Debian Wiki article on subkey management (https://wiki.debian.org/subkeys) o
 removing the master key (ref by http://blog.sanctum.geek.nz/series/linux-crypto)
 
 == Encrypting a file
-gpg [--armor] --recipient 695195A5 --encrypt secret-message.txt
+gpg [--armor] --recipient <KEY-ID> --encrypt secret-message.txt
+gpg -o encrypted_file.gpg --encrypt -r <KEY-ID> original.file
 
+== Decrypting a file
+gpg --decrypt filename.gpg
+
+
+== Symmetric encryption (will ask for passsphrase)
+gpg -c filename.txt   # encrypt
+
+gpg filename.txt      # decrypt
 
 = Using with VIM
 In .bashrc:
