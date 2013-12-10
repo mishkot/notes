@@ -1,12 +1,55 @@
-Resources:
+= Resources:
+  == Manuals:
+  == Utilities:
 
-Manuals:
+
+= Resources:
+
+== Manuals:
 Wikipedia: Pretty Good Privacy        https://en.wikipedia.org/wiki/Pretty_Good_Privacy         
 The GNU Privacy Handbook              http://www.gnupg.org/gph/en/manual.html                   
 Ubuntu Gnu Privacy Guard Howto        https://help.ubuntu.com/community/GnuPrivacyGuardHowto    
 ArchLinux GnuPG                       https://wiki.archlinux.org/index.php/GnuPG
 Linux Crypto Archives - Arabesque     http://blog.sanctum.geek.nz/series/linux-crypto
 
-Utilities:
+== Utilities:
 gnupg.vim: Plugin for gpg files       http://www.vim.org/scripts/script.php?script_id=3645
 The Diceware Passphrase Home          http://world.std.com/~reinhold/diceware.html
+
+
+= GnuPG use for file encrypt
+
+== Set up gpg
+~/.gnupg - set up permissions and back up
+$ umask 077; tar -cf $HOME/gnupg-backup.tar -C $HOME .gnupg
+
+Edit ~/.gnupg/gpg.conf:
+personal-digest-preferences SHA512
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+
+== Generate key
+$ gpg --gen-key
+Select RSA and RSA
+For the key length, choose the maximum 4096 bit RSA
+Does not expire
+
+Name key: Name Last (File Encrypt Key) <email>
+ 
+Passphrase
+
+== Managing keys
+$ gpg --list-secret-keys
+
+$ gpg --list-public-keys
+
+See Debian Wiki article on subkey management (https://wiki.debian.org/subkeys) on managing subkeys and
+removing the master key (ref by http://blog.sanctum.geek.nz/series/linux-crypto)
+
+== Encrypting a file
+gpg [--armor] --recipient 695195A5 --encrypt secret-message.txt
+
+
+= Using with VIM
+In .bashrc:
+ export GPG_TTY=`tty`
