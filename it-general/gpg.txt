@@ -1,8 +1,12 @@
 = Resources:
   == Manuals:
   == Utilities:
+= GnuPG use for file encrypt
+  == Set up gpg
+  == Generate key
+  == Managing keys
 
-
+--------------------------------------------------
 = Resources:
 
 == Manuals:
@@ -52,7 +56,7 @@ gpg -o encrypted_file.gpg --encrypt -r <KEY-ID> original.file
 gpg --decrypt filename.gpg
 
 
-== Symmetric encryption (will ask for passsphrase)
+== Symmetric encryption (will ask for passphrase)
 gpg -c filename.txt   # encrypt
 
 gpg filename.txt      # decrypt
