@@ -1,0 +1,5 @@
+
+
+
+rsync -avz foo:src/bar/ /data/tmp   # src/bar -> /data/tmp/bar archive mode, compressed
+
