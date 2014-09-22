@@ -1,0 +1,2 @@
+#!/bin/ksh
+cd ${0%${0##*/}}.    # change to directory where this script resides
