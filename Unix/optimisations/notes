@@ -1,0 +1,51 @@
+for d in /sys/devices/system/cpu/cpu*/cache/index*; do echo ========== $d; for f in $d/*; do echo $(basename $f) $(cat $f); done; done
+
+http://stackoverflow.com/questions/1922249/c-cache-aware-programming
+
+What every programmer should know about memory (9 parts): http://lwn.net/Articles/250967
+
+https://github.com/cgaebel/CacheLineDetection/blob/master/Cache%20Line%20Detection/cache.c
+
+http://igoro.com/archive/gallery-of-processor-cache-effects/
+
+http://www.research.scea.com/research/pdfs/GDC2003_Memory_Optimization_18Mar03.pdf
+
+
+$ cpuid
+
+/proc/cpuinfo
+
+for d in /sys/devices/system/cpu/cpu*/topology; do echo ========== $d; for f in $d/*; do echo $(basename $f) $(cat $f); done; done
+
+An easy way to see the layout of a data structure compared to cache lines is to use the pahole program (see [dwarves]).
+https://github.com/acmel/dwarves
+https://www.kernel.org/doc/ols/2007/ols2007v2-pages-35-44.pdf
+
+$  man getrusage
+
+oprofile
+$ opcontrol --list-events
+
+--fstrict-aliasing
+
+======================================
+
+http://fluxius.handgrep.se/2011/10/20/the-art-of-elf-analysises-and-exploitations/
+
+readelf
+hd
+objdump     (http://eli.thegreenplace.net/2012/01/03/understanding-the-x64-code-models)
+
+http://programmers.stackexchange.com/questions/252143/reading-assembly-useful-for-insights-when-writing-c-c
+It is not always useful (but sometimes it can help) to read the generated assembly code. Small tip when compiling with GCC, compile with
+ g++ -Wall -fverbose-asm -O2 -S somesourcefile.cc
+
+
+http://eli.thegreenplace.net/2013/12/05/the-cost-of-dynamic-virtual-calls-vs-static-crtp-dispatch-in-c
+perf stat
+https://perf.wiki.kernel.org/index.php/Main_Page - presentation, examples
+perf: Linux profiling with performance counters 
+
+Stroustrup: 5 Languages to know. C++, Java, Python, C, JavaScript; A functional language.
+
+http://eli.thegreenplace.net/tag/c-c
