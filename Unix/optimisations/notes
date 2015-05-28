@@ -1,10 +1,7 @@
 for d in /sys/devices/system/cpu/cpu*/cache/index*; do echo ========== $d; for f in $d/*; do echo $(basename $f) $(cat $f); done; done
 
-http://stackoverflow.com/questions/1922249/c-cache-aware-programming
-
 What every programmer should know about memory (9 parts): http://lwn.net/Articles/250967
-
-https://github.com/cgaebel/CacheLineDetection/blob/master/Cache%20Line%20Detection/cache.c
+Memory optimization: http://www.research.scea.com/research/pdfs/GDC2003_Memory_Optimization_18Mar03.pdf 
 
 http://igoro.com/archive/gallery-of-processor-cache-effects/
 
@@ -14,6 +11,8 @@ http://www.research.scea.com/research/pdfs/GDC2003_Memory_Optimization_18Mar03.p
 $ cpuid
 
 /proc/cpuinfo
+
+http://www.binarytides.com/linux-cpu-information/
 
 for d in /sys/devices/system/cpu/cpu*/topology; do echo ========== $d; for f in $d/*; do echo $(basename $f) $(cat $f); done; done
 
