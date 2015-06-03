@@ -48,3 +48,8 @@ perf: Linux profiling with performance counters
 Stroustrup: 5 Languages to know. C++, Java, Python, C, JavaScript; A functional language.
 
 http://eli.thegreenplace.net/tag/c-c
+
+$ x86info
+
+Huge pages (5 parts)   http://lwn.net/Articles/374424/
+
